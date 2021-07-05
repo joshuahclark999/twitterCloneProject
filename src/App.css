@@ -1,0 +1,20 @@
+body{
+    --twitter-color: #50b7f5;
+    --twitter-background: #E1E8ED;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.app{
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+.flex{
+    display: flex;
+}
+.flex-reverse{
+    display: flex;
+    flex-direction: column;
+}
