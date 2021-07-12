@@ -12,6 +12,10 @@ function TweetBox() {
     const sendTweet = e =>{
         e.preventDefault();
         let id = uuidv4();
+        if(!tweetMessage){
+            alert('Wait, you have to enter something to tweet');
+            return;
+        };
         db.collection('posts').add({
             displayName: 'Josh',
             username: 'testingUser',

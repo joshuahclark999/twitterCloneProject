@@ -8,6 +8,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import EmailIcon from '@material-ui/icons/Email';
 import SettingsIcon from '@material-ui/icons/Settings';
 import Button from '@material-ui/core/Button';
+import SimpleModal from './TweetModal';
 import './css/sidebar.css';
 
 function Sidebar() {
@@ -23,6 +24,7 @@ function Sidebar() {
         <SidebarOption  text="More" Icon={SettingsIcon}/>
         {/* list of sidebar options */}
         <Button variant="outlined" className="sidebarTweet" fullWidth>Tweet</Button>
+        <SimpleModal />
     </div>
   
   );
