@@ -18,8 +18,8 @@ function Post({
     id
 }) {
     
-    function deletePost(id) {
-        console.log('Testing')
+    function deletePost(e) {
+        console.log(e)
     }
     return (
         <div className="post">
@@ -40,6 +40,7 @@ function Post({
                          </div>
                          <div className="post_headerDescription">
                              <p>{content}</p>
+                             
                          </div>
                      </div>
                      {/* <img src={img} alt="" /> */}
@@ -49,7 +50,7 @@ function Post({
                         <FavoriteBorderIcon fontSize="small"/>
                         <DeleteIcon 
                         fontSize="small" 
-                        onClick={deletePost}
+                        // onClick={}
                         className="deleteBtn" />
                     </div>                 
                  </div>
