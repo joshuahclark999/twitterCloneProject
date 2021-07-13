@@ -19,16 +19,26 @@ function Post({
   id,
 }) {
   function deletePost() {
-    // db.collection("posts").doc().delete();
-    let post = db.collection('posts').where('username', '==', userName);
-    post.get().then(querySnapshot=>{
-      querySnapshot.forEach(doc => {
-        console.log(doc)
-      })
-    })
-    // query.delete();
+    let postRef = db.collection("posts");
+    let snapshot = postRef.where('id', '==', id).get();
+    if(snapshot.empty){
+      console.log('No matching documents');
+      return;
+    }
+
+    console.log(snapshot)
+    // const citiesRef = db.collection("cities");
+    // const snapshot = await citiesRef.where("capital", "==", true).get();
+    // if (snapshot.empty) {
+    //   console.log("No matching documents.");
+    //   return;
+    // }
+
+    // snapshot.forEach((doc) => {
+    //   console.log(doc.id, "=>", doc.data());
+    // });
   }
-  
+
   return (
     <div className="post">
       <div className="post_avatar">
