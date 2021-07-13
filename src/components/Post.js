@@ -20,8 +20,12 @@ function Post({
 }) {
   function deletePost() {
     // db.collection("posts").doc().delete();
-    db.collection('posts').where('username', '==', userName).delete();
-      
+    let post = db.collection('posts').where('username', '==', userName);
+    post.get().then(querySnapshot=>{
+      querySnapshot.forEach(doc => {
+        console.log(doc)
+      })
+    })
     // query.delete();
   }
   
