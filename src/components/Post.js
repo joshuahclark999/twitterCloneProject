@@ -7,7 +7,7 @@ import RepeatIcon from "@material-ui/icons/Repeat";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import DeleteIcon from "@material-ui/icons/Delete";
 import db from "../firebase";
-const posts = db.collection('posts');
+// const posts = db.collection('posts');
 function Post({
   displayName,
   userName,
@@ -19,8 +19,10 @@ function Post({
   id,
 }) {
   function deletePost() {
-    // db.collection("posts").doc("kaJMxZZ9C5YgZBbo26uT").delete();
-    console.log(posts)
+    // db.collection("posts").doc().delete();
+    db.collection('posts').where('username', '==', userName).delete();
+      
+    // query.delete();
   }
   
   return (
