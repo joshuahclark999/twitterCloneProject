@@ -22,8 +22,6 @@ function Sidebar() {
         <SidebarOption  text="Messages" Icon={EmailIcon}/>
         <SidebarOption  text="Profile" Icon={PersonIcon}/>
         <SidebarOption  text="More" Icon={SettingsIcon}/>
-        {/* list of sidebar options */}
-        <Button variant="outlined" className="sidebarTweet" fullWidth>Tweet</Button>
         <SimpleModal />
     </div>
   
