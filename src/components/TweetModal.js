@@ -47,7 +47,8 @@ export default function SimpleModal() {
 
   const body = (
     <div style={modalStyle} className={classes.paper}>
-      <TweetBox onClick={handleClose} />
+      <button onClick={handleClose}>x</button>
+      <TweetBox />
     </div>
   );
 
